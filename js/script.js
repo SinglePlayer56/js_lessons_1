@@ -1484,7 +1484,7 @@ console.log(clone);
 
 // alert(calculator.read().equals());
 
-let sum = prompt('Введите выражение типа a+b', '');
+let sum = prompt('Введите выражение типа a + b. Вводите операнды через пробел.', '');
 
 function splitString(sum, separator) {
       let arraySum = sum.split(separator);
