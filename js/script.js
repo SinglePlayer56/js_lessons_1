@@ -4,6 +4,7 @@ let calculator = {
             this.a = +prompt('Введите число а:', '0');
             this.znak = prompt('Введите знак', '');
             this.b = +prompt('Введите число b', '0');
+            return this;
       },
       equals() {
             do {
@@ -22,5 +23,5 @@ let calculator = {
             } while (this.znak != '+' || this.znak != '-' || this.znak != '*' || this.znak != '/');
       },
 };
-calculator.read();
-alert(calculator.equals());
+
+alert(calculator.read().equals());
