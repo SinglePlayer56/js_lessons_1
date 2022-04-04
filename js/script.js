@@ -1,5 +1,4 @@
 'use strict';
-<<<<<<< HEAD
 /*
       age = prompt('Введите число:');
       var a = 3;
@@ -1511,4 +1510,3 @@ if (operandsArray[1] == '+') {
 }
 
 alert(pop);
-
