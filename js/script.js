@@ -1390,31 +1390,32 @@ console.log(clone);
 // console.log(user.hi().message);
 
 /*************************Калькулятор****************/
-let calculator = {
-      read() {
-            this.a = +prompt('Введите число а:', '0');
-            this.znak = prompt('Введите знак', '');
-            this.b = +prompt('Введите число b', '0');
-      },
-      equals() {
-            do {
-                  switch (this.znak) {
-                        case '+':
-                              return this.a + this.b;
-                        case '-':
-                              return this.a - this.b;
-                        case '*':
-                              return this.a * this.b;
-                        case '/':
-                              return this.a / this.b;
-                        default:
-                              this.znak = prompt('Введите знак', '');
-                  }
-            } while (this.znak != '+' || this.znak != '-' || this.znak != '*' || this.znak != '/');
-      },
-};
-calculator.read();
-alert(calculator.equals());
+// let calculator = {
+//       read() {
+//             this.a = +prompt('Введите число а:', '0');
+//             this.znak = prompt('Введите знак', '');
+//             this.b = +prompt('Введите число b', '0');
+//             return this;
+//       },
+//       equals() {
+//             do {
+//                   switch (this.znak) {
+//                         case '+':
+//                               return this.a + this.b;
+//                         case '-':
+//                               return this.a - this.b;
+//                         case '*':
+//                               return this.a * this.b;
+//                        case '/':
+//                               return this.a / this.b;
+//                         default:
+//                               this.znak = prompt('Введите знак', '');
+//                   }
+//             } while (this.znak != '+' || this.znak != '-' || this.znak != '*' || this.znak != '/');
+//       },
+// };
+
+// alert(calculator.read().equals());
 
 /********************Лестница************************/
 
@@ -1440,3 +1441,72 @@ alert(calculator.equals());
 // ladder.showStep();
 
 // ladder.up().up().down().up().up().down().showStep();
+
+/******************************************************/
+
+// function User(name) {
+//       this.name = name;
+//       this.isAdmin = false;
+// }
+
+// let user = new User('Вася');
+
+// console.log(user.name);
+// console.log(user.isAdmin);
+
+// let user =
+// console.log(user());
+
+//let calculator = {
+//       read() {
+//             this.a = +prompt('Введите число а:', '0');
+//             this.znak = prompt('Введите знак', '');
+//             this.b = +prompt('Введите число b', '0');
+//             return this;
+//       },
+//       equals() {
+//             do {
+//                   switch (this.znak) {
+//                         case '+':
+//                               return this.a + this.b;
+//                         case '-':
+//                               return this.a - this.b;
+//                         case '*':
+//                               return this.a * this.b;
+//                        case '/':
+//                               return this.a / this.b;
+//                         default:
+//                               this.znak = prompt('Введите знак', '');
+//                   }
+//             } while (this.znak != '+' || this.znak != '-' || this.znak != '*' || this.znak != '/');
+//       },
+// };
+
+// alert(calculator.read().equals());
+
+let sum = prompt('Введите выражение типа a+b', '');
+
+function splitString(sum, separator) {
+      let arraySum = sum.split(separator);
+      arraySum = arraySum.filter(function (el) {
+            return el != null && el != ' ';
+      });
+      return arraySum;
+}
+let space = ' ';
+let operandsArray = splitString(sum, space).map(function (item) {
+      let number = parseInt(item);
+      return isNaN(number) ? item : number;
+});
+let pop;
+if (operandsArray[1] == '+') {
+      pop = operandsArray[0] + operandsArray[2];
+} else if (operandsArray[1] == '-') {
+      pop = operandsArray[0] - operandsArray[2];
+} else if (operandsArray[1] == '*') {
+      pop = operandsArray[0] * operandsArray[2];
+} else if (operandsArray[1] == '/') {
+      pop = operandsArray[0] / operandsArray[2];
+}
+
+alert(pop);
