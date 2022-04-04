@@ -1511,31 +1511,4 @@ if (operandsArray[1] == '+') {
 }
 
 alert(pop);
-=======
-let calculator = {
-      read() {
-            this.a = +prompt('Введите число а:', '0');
-            this.znak = prompt('Введите знак', '');
-            this.b = +prompt('Введите число b', '0');
-            return this;
-      },
-      equals() {
-            do {
-                  switch (this.znak) {
-                        case '+':
-                              return this.a + this.b;
-                        case '-':
-                              return this.a - this.b;
-                        case '*':
-                              return this.a * this.b;
-                        case '/':
-                              return this.a / this.b;
-                        default:
-                              this.znak = prompt('Введите знак', '');
-                  }
-            } while (this.znak != '+' || this.znak != '-' || this.znak != '*' || this.znak != '/');
-      },
-};
 
-alert(calculator.read().equals());
->>>>>>> 835fc65650ee8a821f1c1b57da9493e0fe5a3cc0
